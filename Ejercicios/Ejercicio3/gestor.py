@@ -13,7 +13,17 @@ class Personaje:
 class Gestor:
     personaje=[]
 
+    def agregar(self,p):
+        self.personaje.append(p)
+    
+    def borrar(self,p):
+        self.personaje.remove(p)
 
+    def mostrar(self):
+        if len(self.personaje) == 0:
+            print("El gestor esta vacio.")#comprobamos si el personaje del gestor esta completado
+        for p in self.personaje:  #imprimimos el personaje del gestor
+            print(p)
 
     def añadir(self):
         file = open('personajes.pckl', 'ab+')#Abre un archivo para agregar y leer en formato binario. El puntero del archivo se encuentra al final del archivo, si el archivo existe. El archivo se abre en el modo de adición. Si el archivo no existe, crea un nuevo archivo para lectura y escritura.
@@ -31,7 +41,10 @@ class Gestor:
         pickle.dump(self.personajes, file)#el metodo dump sirve para almacenar objetos en un fichero
         file.close()
 
-
-
-Guerrero=Personaje("Guerrero", 12, 3, 4, 5)
-print(Guerrero)
+g=Gestor()
+g.agregar(Personaje("Caballero", 4,2,4,2))
+g.agregar(Personaje("Guerrero", 2,4,2,4))
+g.agregar(Personaje("Arquero", 2,4,1,8))
+g.mostrar
+g.borrar("Arquero")
+g.mostrar
