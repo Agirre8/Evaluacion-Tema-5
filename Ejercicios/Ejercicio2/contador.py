@@ -18,4 +18,4 @@ try:
     file.write(str(contador))#como es un txt, lo que le tenemos que escribir son string--str()
     file.close()
 except:
-    print("Error: Fichero corrupto.")
+    print("Error: Fichero orrupto.")
