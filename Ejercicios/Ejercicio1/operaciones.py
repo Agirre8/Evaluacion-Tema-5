@@ -1,37 +1,30 @@
-def suma():
+def suma(num1,num2):
     try:
-        num1 = int(input("Introduzca el primer número de la suma"))#Tengo que especificar que num1 es un int sino en la suma me quedaria por ejemplo 3+7=37
-        num2 = int(input("Introduzca el segundo número de la suma"))
         resultado = num1 + num2
-    except ValueError:
+    except TypeError:
         print("Tipo de dato no válido.")
     return print(f"El resultado de la suma es:{resultado}")
 
-def resta():
+def resta(num1,num2):
     try:
-        num1 = int(input("Introduzca el primer número de la suma"))#Tengo que especificar que num1 es un int sino en la suma me quedaria por ejemplo 3+7=37
-        num2 = int(input("Introduzca el segundo número de la suma"))
         resultado = num1 - num2
-    except ValueError:
+    except TypeError:
         print("Tipo de dato no válido.")
-    return print(f"El resultado de la suma es:{resultado}")
+    return print(f"El resultado de la resta es:{resultado}")
 
-def producto():
+def producto(num1,num2):
     try:
-        num1 = int(input("Introduzca el primer número de la suma"))#Tengo que especificar que num1 es un int sino en la suma me quedaria por ejemplo 3+7=37
-        num2 = int(input("Introduzca el segundo número de la suma"))
         resultado = num1 * num2
-    except ValueError:
+    except TypeError:
         print("Tipo de dato no válido.")
-    return print(f"El resultado de la suma es:{resultado}")
+    return print(f"El resultado de la multiplicacion es:{resultado}")
 
-def division():
+def division(num1,num2):
     try:
-        num1 = int(input("Introduzca el primer número de la suma"))#Tengo que especificar que num1 es un int sino en la suma me quedaria por ejemplo 3+7=37
-        num2 = int(input("Introduzca el segundo número de la suma"))
         resultado = num1 + num2
-    except ValueError:
+    except TypeError:
         print("Tipo de dato no válido.")
     except ZeroDivisionError:
         print("No es posible dividir entre cero")
-    return print(f"El resultado de la suma es:{resultado}")
+    return print(f"El resultado de la division es:{resultado}")
+
